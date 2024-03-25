@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoHub - We're available for marketing</title>
+
+    <!-- cd
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+    <!-- - google font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+    <style>
+      /*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+/**
+ * colors
+ */
+ --cool-gray: hsl(225, 11%, 59%);
+ --rythm: hsl(240, 9%, 53%);
+/* --safety-orange:  rgb(114, 113, 249);; */
+--lavender-gray: hsl(230, 19%, 81%);
+--persian-rose: hsl(328, 100%, 59%);
+/* --red-crayola:  rgb(114, 113, 249);; */
+--eerie-black: hsl(240, 6%, 10%);
+--light-gray: hsl(0, 0%, 80%);
+--cultured-2: hsl(210, 60%, 98%);
+--platinum: hsl(0, 0%, 92%);
+--gray-web: hsl(220, 5%, 49%);
+--cultured: hsl(0, 0%, 93%);
+--black_10: hsla(0, 0%, 0%, 0.1);
+--black_5: hsla(0, 0%, 0%, 0.05);
+--white-1: hsl(0, 0%, 100%);
+--white-2: hsl(0, 14%, 98%);
+--black: hsl(0, 0%, 0%);
+--oxford-blue: hsl(231, 100%, 8%);
+--silver-chalice: hsl(0, 0%, 70%);
+--royal-blue-dark: hsl(231, 61%, 22%);
+--raisin-black-1: hsl(240, 8%, 17%);
+--ghost-white: hsl(230, 60%, 98%);
+
+
+/**
+ * gradient color
+ */
+
+--gradient: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+
+/**
+ * typography
+ */
+
+--ff-roboto: 'Roboto', sans-serif;
+--ff-league-spartan: 'League Spartan', sans-serif;
+
+--fs-1: 3.5rem;
+--fs-2: 3rem;
+--fs-3: 2.1rem;
+--fs-4: 1.7rem;
+--fs-5: 1.4rem;
+--fs-6: 1.3rem;
+
+--fw-700: 700;
+--fw-500: 500;
+
+/**
+ * spacing
+ */
+
+--section-padding: 60px;
+
+/**
+ * shadow
+ */
+
+--shadow-1: 0 6px 24px var(--black_5);
+--shadow-2: 0 2px 28px var(--black_10);
+
+/**
+ * border radius
+ */
+
+--radius-2: 2px;
+--radius-5: 5px;
+--radius-8: 8px;
+
+/**
+ * transition
+ */
+
+--transition-1: 0.25s ease;
+--transition-2: 0.5s ease;
+--cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+a,
+img,
+span,
+time,
+label,
+input,
+button,
+textarea,
+ion-icon { display: block; }
+
+img { height: auto; }
+
+input,
+button,
+textarea {
+background: none;
+border: none;
+font: inherit;
+}
+:is(input, textarea):focus { outline: none; }
+
+:focus { outline-offset: 4px; }
+
+input,
+textarea { width: 100%; }
+
+button { cursor: pointer; }
+
+ion-icon { pointer-events: none; }
+
+address { font-style: normal; }
+
+html {
+font-family: var(--ff-roboto);
+font-size: 10px;
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--white-1);
+color: var(--gray-web);
+font-size: 1.6rem;
+line-height: 1.8;
+}
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+
+::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+
+::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+
+:focus-visible { outline-offset: 4px; }
+
+
+
+
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.container { padding-inline: 15px; }
+
+.btn {
+max-width: max-content;
+color: var(--white-1);
+font-size: var(--fs-6);
+font-weight: var(--fw-700);
+padding: 10px 30px;
+border-radius: var(--radius-5);
+transition: var(--transition-1);
+}
+
+.btn-primary {
+background-image: var(--gradient);
+background-size: 1000%;
+}
+
+.btn-primary:is(:hover, :focus) { background-position: bottom right; }
+
+.btn-secondary {
+background-color: var(--white-1);
+color: var(--eerie-black);
+}
+
+.btn-secondary:is(:hover, :focus) {
+background-color: var(--eerie-black);
+color: var(--white-1);
+}
+
+.section { padding-block: var(--section-padding); }
+
+.h1,
+.h2,
+.h3 {
+color: var(--eerie-black);
+font-family: var(--ff-league-spartan);
+line-height: 1.2;
+}
+
+.h1 { font-size: var(--fs-1); }
+
+.h2 { font-size: var(--fs-2); }
+
+.h3 { font-size: var(--fs-3); }
+
+.w-100 { width: 100%; }
+
+.section-title,
+.section-text { text-align: center; }
+
+.section-text { font-size: var(--fs-6); }
+
+.grid-list {
+display: grid;
+gap: 30px;
+}
+
+.img-holder {
+aspect-ratio: var(--width) / var(--height);
+background-color: var(--light-gray);
+}
+
+.img-cover {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
+
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: var(--white-1);
+padding-block: 15px;
+border-block-end: 1px solid var(--cultured);
+z-index: 4;
+transition: var(--transition-1);
+}
+
+.header.active { filter: drop-shadow(var(--shadow-2)); }
+
+.header > .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-family: var(--ff-league-spartan);
+color: var(--black);
+font-size: 3.5rem;
+font-weight: var(--fw-700);
+line-height: 1;
+}
+
+.nav-toggle-btn { font-size: 40px; }
+
+.nav-toggle-btn.active .open,
+.nav-toggle-btn .close { display: none; }
+
+.nav-toggle-btn .open,
+.nav-toggle-btn.active .close { display: block; }
+
+.navbar {
+background-color: var(--white-1);
+position: absolute;
+top: 100%;
+left: 50%;
+transform: translateX(-50%);
+max-width: calc(100% - 30px);
+width: 100%;
+padding-inline: 0;
+border: 1px solid var(--cultured);
+transition: 0.3s var(--cubic-out);
+max-height: 0;
+visibility: hidden;
+overflow: hidden;
+}
+
+.navbar.active {
+max-height: 320px;
+visibility: visible;
+transition-duration: 0.5s;
+}
+
+.navbar-list {
+padding: 20px 15px;
+padding-block-start: 10px;
+opacity: 0;
+transition: var(--transition-1);
+}
+
+.navbar.active .navbar-list { opacity: 1; }
+
+.navbar-link {
+color: var(--eerie-black);
+font-family: var(--ff-league-spartan);
+font-size: var(--fs-4);
+line-height: 1.2;
+padding-block: 8px;
+transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus) { color: var(--red-crayola); }
+
+.header .btn { margin-block-start: 10px; }
+
+
+
+
+
+/*-----------------------------------*\
+#HEO
+\*-----------------------------------*/
+
+.hero {
+padding-block-start: calc(var(--section-padding) + 50px);
+text-align: center;
+}
+
+.hero-content { margin-block-end: 30px; }
+
+.hero-subtitle {
+color: var(--eerie-black);
+font-size: var(--fs-5);
+font-weight: var(--fw-500);
+}
+
+.hero-title { margin-block: 12px 8px; }
+
+.hero-text { font-size: var(--fs-5); }
+
+.hero .btn {
+margin-inline: auto;
+margin-block-start: 20px;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+#services .section-subheading,
+#services .section-heading{
+  text-align: right;
+
+
+}
+.services{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 2rem;
+}
+.service{
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.service_icon img{
+  width: 50px;
+  margin-bottom: 1rem;
+}
+.services__title{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.services__text{
+  font-size:0.9rem;
+  margin-bottom: 1rem;
+}
+
+.service .arrow-icon{
+  font-size: 1.2rem;
+  color:var(--primary-color);
+  margin-left: auto;
+  transition:transform 0.3s;
+}
+.serice:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+
+/* .service { background-color: var(--white-2); }
+
+.service .section-text { margin-block: 5px 35px; }
+
+.service-card {
+background-color: var(--white-1);
+padding: 20px 15px;
+border: 1px solid var(--platinum);
+border-radius: var(--radius-5);
+text-align: center;
+box-shadow: var(--shadow-1);
+transition: var(--transition-2);
+}
+
+.service-card:is(:hover, :focus-within) { transform: translateY(-10px); }
+
+.service-card .card-icon {
+color: var(--white-1);
+font-size: 25px;
+max-width: max-content;
+margin-inline: auto;
+padding: 18px;
+border-radius: 50%;
+}
+
+.service-card .card-title { margin-block: 20px 8px; }
+
+.service-card .card-text { font-size: var(--fs-6); } */
+
+
+
+
+
+/*-----------------------------------*\
+#PROJECT
+\*-----------------------------------*/
+.project { background-color: var(--ghost-white); }
+
+.project .section-title { margin-block: 20px 60px; }
+
+.filter-list {
+  max-width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 70px;
+}
+
+.filter-btn {
+  color: var(--cool-gray);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  padding: 11px 20px;
+  border-radius: var(--radius-8);
+  transition: var(--transition-1);
+}
+
+.filter-btn:is(:hover, :focus) { color: var(--raisin-black-1); }
+
+.filter-btn.active {
+  background-color: var(--white);
+  color: var(--raisin-black-1);
+  box-shadow: var(--shadow-4);
+}
+
+.project-card {
+  position: relative;
+  border-radius: var(--radius-15);
+  overflow: hidden;
+}
+
+.project-card .card-banner img { transition: var(--transition-2); }
+
+.project-card:is(:hover, :focus-within) .card-banner img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.project-card .card-content {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  background-color: var(--mustard);
+  border-radius: var(--radius-10);
+  padding: 30px 20px;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  transform: translateY(calc(-50% + 20px));
+  transition: var(--transition-2);
+}
+
+.project-card .card-tag {
+  color: var(--raisin-black-1);
+  font-size: var(--fs-9);
+}
+
+
+.project-card:is(:hover, :focus-within) .card-content {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+/*-----------------------------------*\
+#ABOUT
+\*-----------------------------------*/
+
+
+.about .container {
+  display: grid;
+  gap: 50px;
+}
+
+.about .section-title { margin-block-end: 35px; }
+
+.accordion-card .card-title { padding-block-end: 20px; }
+
+.accordion-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accordion-btn ion-icon {
+  font-size: 1.5rem;
+  color: var(--blue-crayola);
+  transition: var(--transition-1);
+}
+
+.accordion-card.expanded .accordion-btn ion-icon {
+  transform: rotate(0.5turn);
+}
+
+.accordion-btn .span { transition: var(--transition-1); }
+
+.accordion-btn:is(:hover, :focus-visible) .span,
+.accordion-card.expanded .accordion-btn .span { color: var(--violet-blue-crayola); }
+
+.accordion-content {
+  padding-inline-start: 24px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion-card.expanded .accordion-content {
+  max-height: max-content;
+  padding-block-end: 20px;
+}
+
+
+/*-----------------------------------*\
+#CTA
+\*-----------------------------------*/
+
+
+
+/*-----------------------------------*\
+#BLOG
+
+
+/*-----------------------------------*\ 
+ * #CONTACT
+\*-----------------------------------*/
+
+.contact { margin-bottom: 120px; }
+
+.contact-content { margin-bottom: 50px; }
+
+.contact-title {
+  color: var(--royal-blue-dark);
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: var(--fw-500) !important;
+}
+
+.contact-banner img { width: 100%; }
+
+.input-wrapper { margin-bottom: 30px; }
+
+.input-label {
+  color: var(--oxford-blue);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  margin-bottom: 10px;
+}
+
+.input-field {
+  border-bottom: 1px solid var(--platinum);
+  padding: 7px 0;
+  font-size: var(--fs-6);
+}
+
+.input-field::placeholder { color: var(--silver-chalice); }
+
+textarea {
+  max-height: 300px;
+  min-height: 100px;
+  height: 100px;
+  resize: vertical;
+}
+
+
+
+
+
+/*-----------------------------------*\ 
+ * #FOOTER
+\*-----------------------------------*/
+
+footer { background: var(--white-2); }
+
+.footer-top { padding: 80px 0 50px; }
+
+.footer-brand { margin-bottom: 20px; }
+
+footer .logo { margin-bottom: 30px; }
+
+.footer-text {
+  color: var(--rythm);
+  font-size: var(--fs-6);
+  margin-bottom: 20px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.social-link {
+  color: var(--rythm);
+  font-size: var(--fs-4);
+  margin-bottom: 10px;
+}
+
+.social-link:is(:hover, :focus) { color: var(--french-rose); }
+
+.footer-link-list:not(:last-child) { margin-bottom: 30px; }
+
+.footer-link-list .link-title { margin-bottom: 15px; }
+
+.footer-link {
+  color: var(--cool-gray);
+  font-size: var(--fs-6);
+  margin-bottom: 10px;
+  max-width: 150px;
+}
+
+.footer-link:is(:hover, :focus) { color: var(--french-rose); }
+
+.footer-bottom {
+  padding: 20px 15px;
+  border-top: 1px solid hsla(0, 0%, 18%, 0.2);
+}
+
+.copyright {
+  color: var(--cool-gray);
+  text-align: center;
+  font-size: var(--fs-6);
+}
+
+.copyright a {
+  display: inline-block;
+  color: var(--cool-gray);
+}
+
+.copyright a:is(:hover, :focus) { color: var(--french-rose); }
+
+.project-card .h3{
+  color: gainsboro;
+}
+
+/*  */
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 25px;
+}
+
+.contact-item { min-width: 100%; }
+
+.contact-card {
+  background-color: var(--white-1);
+  padding: 20px;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contact-card .card-icon {
+  background-color: var(--cultured-2);
+  color: var(--red-crayola);
+  font-size: 25px;
+  padding: 13px;
+  border-radius: 50%;
+  transition: var(--transition-1);
+}
+
+.contact-card:is(:hover, :focus) .card-icon {
+  background-color: var(--red-crayola);
+  color: var(--white-1);
+}
+
+.contact-card .card-title { margin-block-end: 5px; }
+
+.contact-card :is(.card-link, .card-address) {
+  font-size: var(--fs-6);
+  transition: var(--transition-1);
+}
+
+.contact-card .card-link:is(:hover, :focus) { color: var(--red-crayola); }
+
+
+
+
+
+/*-----------------------------------*\
+#BACK TO TOP
+\*-----------------------------------*/
+
+.back-top-btn {
+position: fixed;
+bottom: 10px;
+right: 20px;
+background-color: green;
+color: var(--white-1);
+padding: 12px;
+border-radius: 50%;
+box-shadow: var(--shadow-2);
+z-index: 4;
+opacity: 0;
+visibility: hidden;
+transition: var(--transition-1);
+}
+
+.back-top-btn.active {
+opacity: 1;
+visibility: visible;
+transform: translateY(-10px);
+}
+
+.back-top-btn:is(:hover, :focus) { opacity: 0.9; }
+
+
+
+
+
+/*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+* responsive for larger than 575px screen
+*/
+@media only screen and (max-width: 600px){
+ .contact-list{
+  display: block;
+ }
+
+}
+@media (min-width: 575px) {
+
+/**
+ * REUSED STYLE
+ */
+
+.container {
+  max-width: 540px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.grid-list {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+}
+
+
+
+/**
+ * BLOG
+ */
+
+.blog .grid-list { grid-template-columns: 1fr; }
+
+.blog-card.grid {
+  display: grid;
+  grid-template-columns: 0.47fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+/**
+ * CONTACT
+ */
+ .contact-title { --fs-2: 32px; }
+
+.contact-banner {
+  max-width: 300px;
+  margin-inline: auto;
+}
+.footer-brand { margin-bottom: 40px; }
+
+.footer-link-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+}
+
+
+
+
+/**
+* responsive for larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+/**
+ * CUSTOM PROPERTY
+ */
+
+:root {
+
+  /**
+   * typography
+   */
+
+  --fs-1: 4.5rem;
+  --fs-2: 3.7rem;
+  --fs-3: 2.3rem;
+  --fs-4: 1.8rem;
+  --fs-5: 1.5rem;
+  --fs-6: 1.4rem;
+
+}
+
+
+
+/**
+ * REUSED STYLE
+ */
+
+.container { max-width: 720px; }
+
+.section-text {
+  max-width: 65ch;
+  margin-inline: auto;
+}
+ /**
+   * PROJECT
+   */
+
+   .project .grid-list > li:first-child { grid-column: 1 / 3; }
+
+
+/**
+ * HERO
+ */
+
+.hero-text {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+
+
+/**
+ * ABOUT
+ */
+
+.about-banner { max-width: 550px; }
+
+.about .section-text {
+  max-width: unset;
+  margin-inline: 0;
+}
+ /**
+   * PROJECT
+   */
+
+ 
+
+
+
+/**
+ * CONTACT
+ */
+
+
+ .contact-title { --fs-2: 42px; }
+}
+
+.contact-item { min-width: calc(50% - 12.5px); }
+
+/**
+* responsive for larger than 992px screen
+*/
+
+@media (min-width: 992px) {
+
+/**
+ * CUSTOM PROPERTY
+ */
+
+:root {
+
+  /**
+   * typography
+   */
+
+  --fs-1: 5rem;
+  --fs-2: 4rem;
+  --fs-3: 2.5rem;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 100px;
+
+}
+
+
+
+/**
+ * REUSED STYLE
+ */
+
+.container { max-width: 960px; }
+
+.grid-list { grid-template-columns: repeat(3, 1fr); }
+
+
+
+/**
+ * HEADER
+ */
+
+.nav-toggle-btn { display: none; }
+
+.navbar,
+.navbar.active { all: unset; }
+
+.navbar-list {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-link { position: relative; }
+
+.navbar-link:is(:hover, :focus) { color: var(--eerie-black); }
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: var(--gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-2);
+}
+
+.navbar-link:is(:hover, :focus)::after { transform: scaleX(1); }
+
+.header .btn { margin-block-start: 0; }
+
+
+
+/**
+ * HERO
+ */
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  text-align: left;
+}
+
+.hero-content { margin-block-end: 0; }
+
+.hero-subtitle {
+  position: relative;
+  padding-inline-start: 15px;
+}
+
+.hero-subtitle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--red-crayola);
+}
+
+.hero-text,
+.hero .btn { margin-inline: 0; }
+
+
+
+/**
+ * SERVICE
+ */
+
+.service-card { padding: 20px; }
+
+.service-card .h3 { --fs-3: 2.3rem; }
+
+
+
+/**
+ * PROJECT
+ */
+
+ .filter-btn {
+    --fs-9: 1.8rem;
+    padding: 20px 25px;
+  }
+
+
+
+
+/**
+ * ABOUT
+ */
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-banner { margin-block-end: 0; }
+
+
+
+/**
+ * BLOG
+ */
+
+
+
+
+/**
+ * CONTACT
+ */
+ /**
+   * CONTACT
+   */
+
+   .contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .contact-content { max-width: 400px; }
+
+  .contact-title { text-align: left; }
+
+  .contact-form { width: 50%; }
+
+  .contact-item { min-width: calc(33.33% - 16.66px); }
+
+.contact-card { padding: 30px; }
+
+.contact-card .card-icon { font-size: 32px; }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .footer-brand,
+  .footer-link-list:not(:last-child) { margin-bottom: 0; }
+
+  .footer-link-box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+  }
+
+
+
+
+
+.feature .container {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 30px;
+}
+
+.feature .section-text { margin-block: 25px 30px; }
+
+.feature-list {
+  display: grid;
+  gap: 15px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-card .card-icon {
+  background-color: var(--lavender-web);
+  font-size: 1.4rem;
+  padding: 4px;
+  border-radius: var(--radius-circle);
+}
+
+.feature-card .card-icon ion-icon { --ionicon-stroke-width: 40px; }
+
+}
+/**
+* responsive for larger than 1200px screen
+*/
+
+@media (min-width: 1200px) {
+
+/**
+ * CUSTOM PROPERTY
+ */
+
+:root {
+
+  /**
+   * typography
+   */
+
+  --fs-1: 6.8rem;
+  --fs-2: 4.5rem;
+  --fs-4: 1.9rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.6rem;
+
+}
+
+
+
+/**
+ * REUSED STYLE
+ */
+
+.container { max-width: 1140px; }
+
+.btn { --fs-6: 1.5rem; }
+
+
+
+/**
+ * SERVICE
+ */
+
+.service-card { padding: 30px; }
+
+.service-card .h3 { --fs-3: 2.5rem; }
+
+
+
+/**
+ * PROJECT
+ */
+
+ .filter-btn { padding-inline: 40px; }
+
+
+
+/**
+ * ABOUT
+ */
+
+.about .container { gap: 60px; }
+
+.about-item { gap: 7px; }
+
+.about-item ion-icon { font-size: 20px; }
+
+
+
+/**
+ * CTA
+ */
+
+.cta .section-title { margin-block: 15px 24px; }
+
+
+
+/**
+ * BLOG
+ */
+
+.blog-card .time { --fs-6: 1.6rem; }
+
+.blog-card.grid .h3 { --fs-3: 2.4rem; }
+
+.contact-card { gap: 20px; }
+
+.contact-card .card-icon { padding: 15px; }
+
+}
+.chk{
+  display: none;
+}
+
+
+
+
+    </style>
+  </head>
+
+  <body id="top">
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="./assets/images/Hue_Main_logo_WoBG.png" alt="Funel logo">
+        </a>
+
+        <nav class="navbar containerr" data-navbar>
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#services" class="navbar-link" data-nav-link>Services</a>
+            </li>
+
+            <li>
+              <a href="#project" class="navbar-link" data-nav-link>Project</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+
+            <li>
+              <a href="#contactus" class="navbar-link" data-nav-link>Contact
+                Us</a>
+            </li>
+
+            <li>
+              <a href="#contactus" class="btn btn-primary">Contact Us</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu"
+          data-nav-toggler>
+          <ion-icon name="menu-outline" class="open"></ion-icon>
+          <ion-icon name="close-outline" class="close"></ion-icon>
+        </button>
+
+      </div>
+    </header>
+
+    <main>
+      <article>
+
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="section hero" id="home" aria-label="hero"
+          style="margin-top: -60PX;">
+          <div class="container">
+
+            <div class="hero-content">
+
+              <p class="hero-subtitle">HueSolution   Marketing Agency</p>
+
+              <h1 class="h1 hero-title" style="font-weight: 900;">We are
+                Best for Marketing</h1>
+
+              <p class="hero-text">
+                We specialize in providing a comprehensive range of services, including search engine optimization (SEO), advertising management, social media management, web development, app development, and custom software development.
+              </p>
+
+              <a href="#" class="btn btn-primary">Get Started</a>
+
+            </div>
+
+            <figure class="hero-banner">
+              <img src="./assets/images/check_ing.png" width="720" height="673"
+                alt="hero banner" class="w-100">
+            </figure>
+
+          </div>
+        </section>
+
+        <section class=" mockup--section mt-5 overflow-hidden ">
+          <div class="py-1 text-center container mb-4" data-aos="zoom-in"
+            data-aos-duration="500">
+            <h2 class="h2 section-title">Services We Provided</h2>
+
+            <p class="section-text">
+              we specialize in creating customized websites, developing innovative apps, and implementing effective digital marketing strategies to help businesses thrive in the online world.
+            </p>
+          </div>
+
+          <div class="containerr  ">
+            <div class="row  align-items-center">
+              <div class="col-lg-6  " data-aos="fade-right"
+                data-aos-duration="400">
+
+                <h3 class="mockup--title neroColor"><span
+                    class="mainColor">App Development </span> Need a unique and user-friendly app  </h3>
+                <p class=" py-1 lh-lg">At hue solution, we specialize creating innovative and user-friendly mobile applications tailored your specific needs.  Whether you're looking to build an iOS, Android, or cross-platform app, we have the expertise to deliver high-quality solutions that will enhance your brand and engage your audience. </p>
+              </div>
+              <div class="col-lg-6 col-md-10  position-relative text-end "
+                data-aos="fade-left"
+                data-aos-duration="500">
+                <div class="moucpAft d-none d-lg-block"></div>
+                <img class="w-100 " src="./assets/images/MoucpMobile (3).svg"
+                  loading="lazy" alt="seo">
+              </div>
+            </div>
+            
+            <div class="containerr">
+              <div
+                class="row  my-5 py-5 align-items-center justify-content-between ">
+                <div class="col-lg-6 moucup--order   " data-aos="zoom-out-right"
+                  data-aos-duration="500">
+                  <!-- <div class="moucpAft d-none d-lg-block"></div> -->
+                  <img class="w-100  " src="./assets/images/website-mockup.svg"
+                    loading="lazy" alt="seo">
+                </div>
+                <div class=" col-lg-6 col-md-10  " data-aos="zoom-out-left"
+                  data-aos-duration="500">
+
+                  <h3 class="mockup--title neroColor"><span
+                      class="mainColor">  Website Development </span> Full service web design agency </h3>
+                  <p class=" py-1 lh-lg">We specialize in creating custom, responsive websites that are tailored to your unique needs and goals. We can help you set up an e-commerce website that allows you to sell your products or services online easily and efficiently. From secure payment gateways to user-friendly interfaces, we've got you covered.</p>
+                </div>
+
+              </div>
+
+              <div class="row my-5 pt-5  align-items-center">
+
+                <div class="col-lg-6  " data-aos="fade-right"
+                  data-aos-duration="500">
+
+                  <h3 class="mockup--title neroColor"><span
+                      class="mainColor">Digital Marketing </span> Elevate your digital presence </h3>
+                  <p class=" py-1 lh-lg">Our team of experts will develop a customized strategy to increase your online visibility, attract new customers, and drive conversions. From SEO and PPC to social media marketing and email campaigns, we use the latest tools and techniques to ensure your brand reaches the right audience at the right time. </p>
+                </div>
+                <div class="col-lg-6 col-md-10 position-relative text-center "
+                  data-aos="fade-left"
+                  data-aos-duration="500">
+                  <div class="moucpvr d-none d-lg-block   "></div>
+                  <img class="w-100  "
+                    src="./assets/images/digital marketting_mockups.png"
+                    loading="lazy" alt="seo">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- 
+        - #SERVICE
+      -->
+
+        <section id="services"
+          style="background: url(./assets/images/services-bg.png);background-repeat: no-repeat;
+    background-position: top;background-size: 100% 80%;
+    ">
+          <div class="container">
+
+            <h2 class="h2 section-title"> Additional  Services We Provided</h2>
+
+            <p class="section-text">
+              Each member of our team is dedicated to delivering high-quality results and exceeding client expectations. We take pride in our collaborative approach and transparent communication to ensure smooth project delivery.
+            </p>
+            <div class="services" style="margin-top: 30px;">
+              <div class="service">
+                <div class="service_icon">
+                  <img src="./assets/images/squares.png">
+                </div>
+                <h3 class="services__title">
+                  Custom Software
+                </h3>
+                <p class="services__text">The timeline for custom software development varies depending on the complexity of the project. Our team will work with you to establish a timeline that meets your needs.
+                </p>
+                <div class="arrow-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service_icon">
+                  <img src="./assets/images/shopping-cart.png">
+                </div>
+                <h3 class="services__title">
+                  E-commerse Support
+                </h3>
+                <p class="services__text">Businesses of all sizes can benefit from e-commerce support, especially those looking to enhance their online presence, increase sales, and improve customer experience.
+                </p>
+                <div class="arrow-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service_icon">
+                  <img src="./assets/images/video-camera.png">
+                </div>
+                <h3 class="services__title">
+                  Video Production
+                </h3>
+                <p class="services__text">Video production allows you to create engaging visual content that captures your audience's attention, tells your brand story, and differentiates you from competitors.
+                </p>
+                <div class="arrow-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service_icon">
+                  <img src="./assets/images/headphones.png">
+                </div>
+                <h3 class="services__title">
+                  Google Ads
+                </h3>
+                <p class="services__text">Google Ads can help increase your online visibility, drive targeted traffic to your website, and generate leads and conversions for your business.
+                </p>
+                <div class="arrow-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service_icon">
+                  <img src="./assets/images/placeholder.png">
+                </div>
+                <h3 class="services__title">
+                  SEO optimization
+                </h3>
+                <p class="services__text">SEO optimization is the process of improving your website's visibility on search engines. It is crucial for driving organic traffic to your site and increasing your online presence
+                </p>
+                <div class="arrow-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service_icon">
+                  <img src="./assets/images/upload.png">
+                </div>
+                <h3 class="services_title">
+                  Graphic Design
+                </h3>
+                <p class="services__text">We offer a wide range of graphic design services, including logo design, branding, web design, and print materials, to help you create a cohesive and professional brand image.
+                </p>
+                <div class="arrow-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="section project" id="project" aria-label="project">
+          <div class="container">
+  
+            <p class="section-subtitle has-before text-center">Projects</p>
+  
+            <h2 class="h2 section-title text-center">
+              Hue Solution <span class="has-before">project</span>
+            </h2>
+  
+            
+            <div class="galleryy">
+              
+            <ul class="grid-list wesbite ">
+  
+              <li >
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 835; --height: 429;">
+                    <img src="./assets/images/first-protfolio-image.jpg" width="835" height="429" loading="lazy" alt="Book art design"
+                      class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h3 class="h3" style="color: white;">
+                      <a href="#" class="card-title">Website design</a>
+                    </h3>
+  
+                    <a href="#" class="card-tag">Branding</a>
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li >
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                    <img src="./assets/images/elegantmind-e-commerce-ui-kit-josetcastaneda.png" width="416" height="429" loading="lazy" alt="Graphic Design"
+                      class="img-cover">
+                  </figure>
+  
+                  <div class="card-content" >
+                    <h3 class="h3"style="color: #fff;">
+                      <a href="#" class="card-title" >Apps Design</a>
+                    </h3>
+  
+                    <a href="#" class="card-tag">Design</a>
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li >
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                    <img src="./assets/images/kenny-eliason-Ah4F6g-OmgI-unsplash.jpg" width="416" height="429" loading="lazy" alt="3d Digital Art"
+                      class="img-cover">
+                  </figure>
+  
+                  <div class="card-content"  >
+                    <h3 class="h3" style="color: #fff;">
+                      <a href="#" class="card-title">Add Management Design</a>
+                    </h3>
+  
+                    <a href="#" class="card-tag">Design</a>
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li >
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                    <img src="./assets/images/seoimage.png" width="416" height="429" loading="lazy" alt="Web Design"
+                      class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h3 class="h3" style="color: #fff;">
+                      <a href="../innohub/index.html"  > Seo</a>
+                    </h3> 
+  
+                    <a href="#" class="card-tag" >Design</a>
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li >
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                    <img src="./assets/images/OQ3A2R0.jpg" width="416" height="429" loading="lazy"
+                      alt="Mobile App Design" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+                    <h3 class="h3" style="color: #fff;">Branding
+                      <a href="#" class="card-title" ></a>
+                    </h3>
+  
+                    <a href="#" class="card-tag" style="color: #fff;">Design</a>
+                  </div>
+  
+                </div>
+              </li>
+                    <!-- apps   -->
+
+             
+
+            </ul>
+             
+
+          
+            
+          
+
+             <!-- 4 -->
+           
+
+             <!-- 5-->
+            
+  
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="about" aria-labelledby="about-label" id="about" >
+          <div class="container">
+
+            <figure class="about-banner">
+              <img src="./assets/images/about-banner.png" width="800"
+                height="580" loading="lazy" alt="about banner"
+                class="w-100">
+            </figure>
+
+            <div class="about-content">
+
+              <p class="section-subtitle" id="about-label">Why Choose Us?</p>
+
+              <h2 class="h2 section-title">
+                We bring solutions to make life easier for our clients.
+              </h2>
+
+              <ul>
+
+                <li class="about-item">
+                  <div class="accordion-card expanded" data-accordion>
+
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon name="chevron-down-outline" aria-hidden="true"
+                          class="down"></ion-icon>
+
+                        <spna class="span h5">Skilled Professional </spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      Our team consists of skilled professionals with years of experience in digital marketing, SEO, website development, and video production. We are dedicated to delivering high-quality services and personalized solutions to meet the unique needs of each client.
+                    </p>
+
+                  </div>
+                </li>
+
+                <li class="about-item">
+                  <div class="accordion-card" data-accordion>
+
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon name="chevron-down-outline" aria-hidden="true"
+                          class="down"></ion-icon>
+
+                        <spna class="span h5">Top-Notch Support</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      . Our team is dedicated to providing top-notch customer support to ensure your experience with us is nothing short of exceptional.
+                    </p>
+
+                  </div>
+                </li>
+
+                <li class="about-item">
+                  <div class="accordion-card" data-accordion>
+
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon name="chevron-down-outline" aria-hidden="true"
+                          class="down"></ion-icon>
+
+                        <spna class="span h5">Purpose and Goals</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      Our mission is simple: to empower businesses to thrive in the digital world. We strive to provide top-notch digital marketing solutions, SEO strategies, website development services, and video production expertise to help our clients stand out in the crowded online space.
+
+Introduction to the Team  
+                    </p>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+
+        <!-- feature  -->
+
+        <section class="  about" aria-labelledby="feature-label" style="margin-top: 30px;" id="feature">
+          <div class="container">
+            <figure class="feature-banner">
+              <img src="./assets/images/feature-banner.png" width="800"
+                height="880" loading="lazy" alt="about banner"
+                class="w-100" style="width: 80%;">
+            </figure>
+
+            <div class="feature-content">
+
+              <p class="section-subtitle" id="feautre-label">Our Solutions</p>
+
+              <h2 class="h2 section-title">
+                Maximize your online potential with our Google Business Profile Optimization
+              </h2>
+
+              <p class="section-text">
+                Our comprehensive digital marketing services, including website development, video production, and SEO solutions, are designed to help you generate leads, increase brand value, and attract more customers to your business. With our expertise and dedication, we can help you stand out in the competitive digital landscape and achieve your marketing goals.
+              </p>
+
+              <ul class="feature-list">
+
+                <li>
+                  <div class="feature-card">
+
+                    <div class="card-icon">
+                      <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <span class="span">
+                     
+Enhance your online presence with our  solutions.
+                    </span>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="feature-card">
+
+                    <div class="card-icon">
+                      <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <span class="span">
+                     
+Boost your brand with professional website 
+                    </span>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="feature-card">
+
+                    <div class="card-icon">
+                      <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <span class="span">
+                      Dominate Search Engines with Our SEO Services
+
+
+                    </span>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="feature-card">
+
+                    <div class="card-icon">
+                      <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                    </div>
+
+                    <span class="span">
+                      Video content boosts brand visibility.
+                    </span>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- feature us  -->
+
+        <!-- 
+        - #CTA
+      -->
+
+        <section class="contact" id="contact" style="margin-top: 100px;">
+          <div class="container">
+
+            <div class="contact-content">
+              <h2 class="h2 contact-title">Let’s scale your brand, together</h2>
+
+              <figure class="contact-banner">
+                <img src="./assets/images/contact.png" alt="contact banner">
+              </figure>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+              <div class="input-wrapper">
+                <input type="hidden" name="access_key" value="e3a37105-06ff-4cec-b560-310fc1ab8daa">
+                <label for="name" class="input-label">Name *</label>
+
+                <input type="text" name="name" id="name" required
+                  placeholder="Type Name" class="input-field">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="phone" class="input-label">Phone</label>
+
+                <input type="tel" name="phone" id="phone"
+                  placeholder="Type Phone Number" class="input-field" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="email" class="input-label">Email Address *</label>
+
+                <input type="email" name="email" id="email" required
+                  placeholder="Type Email Address" class="input-field">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="message" class="input-label">How can we help?
+                  *</label>
+
+                <textarea name="message" id="message"
+                  placeholder="Type Description" required
+                  class="input-field"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send
+                Message</button>
+
+            </form>
+
+          </div>
+         
+        </section>
+
+
+        <section class="section contact" id="contactus" aria-label="contact" >
+          
+  
+            <ul class="contact-list"style="margin-top: -100px;">
+  
+              <li class="contact-item">
+                <div class="contact-card">
+  
+                  <div class="card-icon">
+                    <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3 card-title">Mail Here</h3>
+  
+                    <a href="mailto:hello@luaz.com" class="card-link">info@huesolution.com</a>
+                    <a href="mailto:info@luaz.com" class="card-link">huesolution7@gmail.com.</a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li class="contact-item">
+                <div class="contact-card">
+  
+                  <div class="card-icon">
+                    <ion-icon name="map-outline" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3 card-title">Visit Here</h3>
+  
+                    <address class="card-address">
+                      Sreekariyam P O, Edavacode, <br>
+                      Thiruvananthapuram, Kerala 695017
+                    </address>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li class="contact-item">
+                <div class="contact-card">
+  
+                  <div class="card-icon">
+                    <ion-icon name="headset-outline" aria-hidden="true"></ion-icon>
+                  </div>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3 card-title">Call Here</h3>
+  
+                    <a href="tel:+1234567890" class="card-link">+91 7736 4674 37</a>
+                    <a href="tel:+2414524526" class="card-link">+91 9778 0642 40</a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+            </ul>
+  
+          </div>
+        </section>
+
+      </article>
+
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer style="margin-top: -150px;">
+
+      <div class="footer-top">
+        <div class="container">
+
+          <div class="footer-brand">
+
+            <a href="#" class="logo">
+              <img src="./assets/images/Hue_Main_logo_Vec.svg" alt="Funel logo">
+            </a>
+
+            <p class="footer-text">Follow us on</p>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="https://twitter.com/zec_sha9684"
+                  class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/huesolution/"
+                  class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61556885063829" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-link-box">
+
+            <ul class="footer-link-list">
+
+              <li>
+                <h3 class="h4 link-title">Company</h3>
+              </li>
+
+              <li>
+                <a href="#about" class="footer-link">About Us</a>
+              </li>
+
+              <li>
+                <a href="#feature" class="footer-link">Features</a>
+              </li>
+
+              <li>
+                <a href="#contact" class="footer-link">Inquiry</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-link-list">
+
+              <li>
+                <h3 class="h4 link-title">Products</h3>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Website</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Apps</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Branding</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-link-list">
+
+              <li>
+                <h3 class="h4 link-title">Resources</h3>
+              </li>
+
+              <li>
+                <a href="#contact" class="footer-link">FAQ’S</a>
+              </li>
+
+              <li>
+                <a href="#home" class="footer-link">Home</a>
+              </li>
+
+              <li>
+                <a href="#contactus" class="footer-link">Terms & Conditions</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-link-list">
+
+              <li>
+                <h3 class="h4 link-title">Relevent</h3>
+              </li>
+
+              <li>
+                <a href="#about" class="footer-link">Why</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Products</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Customers</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 
+    - #BACK TO TOP
+  -->
+
+      <a href="https://wa.me/7736467437" aria-label="back to top" data-back-top-btn
+        class="back-top-btn">
+        <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+      </a>
+      
+      <!-- 
+    - custom js link
+  -->
+      <script src="./assets/js/script.js" defer></script>
+      <script src="./assets/js/fontawesome.min.js"></script>
+
+      <script src="./assets/js/jquery.js"></script>
+      <!-- Aos -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <!-- bootstrap -->
+      <script src="./assets/js/bootstrap.bundle.min.js"></script>
+      <!-- custom js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+      <!-- 
+    - ionicon link
+  -->
+      <script type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule  
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+
+
+ // 2000 milliseconds = 2 seconds
+
+
+
+</script>
+    </body>
+
+  </html>
